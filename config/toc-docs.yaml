@@ -1,10 +1,10 @@
 rootPage: setup-installation
 sections:
-  Getting Started:
+  开始:
     icon: "icon-wrench"
     pages:
-      setup/installation: "Installation"
-      setup/configuration: "Configuration"
+      setup/installation: "安装"
+      setup/configuration: "配置"
 
   "Architecture Concepts":
     icon: "icon-lightbulb"
