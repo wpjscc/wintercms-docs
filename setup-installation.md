@@ -17,7 +17,7 @@
 您可以使用[基于Web的安装程序](#web-based-installation)或[Composer安装说明](../help/using-composer)中的两种方式安装Winter。在继续之前，您应该检查服务器是否满足最低系统要求。
 
 <a name="system-requirements"></a>
-## 最低系统要求
+## 最低系统要求1
 
 Winter CMS对于Web托管有一些服务器要求：
 
