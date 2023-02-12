@@ -6,7 +6,7 @@ sections:
       setup/installation: "安装"
       setup/configuration: "配置"
 
-  "Architecture Concepts":
+  "架构概念":
     icon: "icon-lightbulb"
     pages:
       architecture/introduction: "Introduction"
