@@ -1,4 +1,4 @@
-rootPage: "setup/installation"
+rootPage: "setup-installation"
 sections:
   Getting Started:
     icon: "icon-wrench"
