@@ -39,80 +39,83 @@ sudo apt-get update &&
 sudo apt-get install php php-ctype php-curl php-xml php-fileinfo php-gd php-json php-mbstring php-mysql php-sqlite3 php-zip
 ```
 
-When using the SQL Server database engine, you will need to install the [group concatenation](https://groupconcat.codeplex.com/) user-defined aggregate.
+在使用 SQL Server 数据库引擎时，您需要安装 [group concatenation](https://groupconcat.codeplex.com/) 用户定义的聚合。
 
 <a name="web-based-installation"></a>
-## Web-based installation
+## 基于Web的安装
 
-The [Web Installer](https://github.com/wintercms/web-installer) is the recommended way to install Winter for **non-technical users**. It is simpler than the command-line installation and doesn't require any special skills.
+[Web Installer](https://github.com/wintercms/web-installer)是推荐给**非技术用户**安装 Winter 的方法。它比命令行安装更简单，不需要任何特殊技能。
 
-> **NOTE:** If you are a developer, we recommend that you [install via Composer instead](../help/using-composer)
+> **注意：**如果您是开发者，我们建议您 [通过 Composer 安装](../help/using-composer)
 
-1. Prepare an empty directory on the web server that will host your Winter CMS installation. It can be a main domain, sub-domain or subfolder.
-2. [Download the "install.zip" file](https://github.com/wintercms/web-installer/releases/latest) from the latest release of the Winter CMS Web Installer into this folder.
-3. Unzip the downloaded ZIP file.
-4. Grant write permissions to all files and folders that were extracted.
-5. In your web browser, navigate to the URL pointing to that folder, and include `/install.html` at the end of the URL.
-6. Follow the instructions given in the installer.
+1. 在将要托管 Winter CMS 安装的网络服务器上准备一个空目录。它可以是主域、子域或子文件夹。
+2. 在该文件夹中从 Winter CMS Web Installer 的最新版本中 [下载 "install.zip" 文件](https://github.com/wintercms/web-installer/releases/latest)。
+3. 解压下载的 ZIP 文件。
+4. 将提取的所有文件和文件夹授予写权限。
+5. 在网页浏览器中导航到指向该文件夹的 URL，并在 URL 结尾处包括 `/install.html`。
+6. 按照安装程序给出的说明进行操作。
 
 ![Winter CMS Installer](https://github.com/wintercms/docs/blob/main/images/web-installer.jpg?raw=true) {.img-responsive .frame}
 
 <a name="troubleshoot-installation"></a>
-### Troubleshooting a web-based installation
+### 解决网页安装问题
 
-1. **Unable to connect to the Winter Marketplace API**: If your server has a firewall blocking requests to port 443, you will need to allow requests and responses for this port. Contact your system administrator to allow access to this port.
+1. **无法连接到 Winter Marketplace API**：如果您的服务器有一个防火墙阻止到端口 443 的请求，您需要允许此端口的请求和响应。请联系您的系统管理员以允许访问此端口。
 
-2. **Installer fails on the "Determining dependencies" or "Installing dependencies" step**: Under the hood, the web installer uses Composer to process and install the dependencies necessary to run Winter CMS - note, you *do not* need Composer installed as a CLI tool for this to work. This process may require a larger amount of memory to complete - if your environment restricts memory usage for your applications, consider allowing up to 1.5GB of memory temporarily for the installer, then reduce it after the installation is complete. The installer will try to do this automatically.
+2. **安装程序在“确定依赖关系”或“安装依赖关系”步骤失败**：在底层，网页安装程序使用 Composer 处理和安装运行 Winter CMS 所必需的依赖项 - 请注意，您 *不* 需要安装作为 CLI 工具的 Composer。此过程可能需要更多的内存完成 - 如果您的环境限制应用程序的内存使用，请考虑临时允许安装程序使用多达 1.5GB 的内存，然后在安装完成后减少它。安装程序将尝试自动执行此操作。
 
-3. **Installer does not display or function correctly**: The web installer has been built on modern frontend frameworks, and may require the use of a more recent browser version. Consider installing Mozilla Firefox, Microsoft Edge or Google Chrome and keeping it up-to-date.
+3. **安装程序未正确显示或功能**：网页安装程序基于现代前端框架建立，可能需要使用更新版本的浏览器。请考虑安装 Mozilla Firefox，Microsoft Edge 或 Google Chrome 并保持其最新。
 
-4. **Unable to parse JSON response**: Depending on your internet connection, downloading all the source files may take more time than the [`max_execution_time` PHP configuration value](https://www.php.net/manual/en/info.configuration.php#ini.max-execution-time) allows; causing the download to end with an incomplete file base. Modify the PHP configuration to increase this value and try again.
+4. **无法解析 JSON 响应**：根据您的互联网连接情况，下载所有源文件可能需要的时间超过了 [`max_execution_time` PHP 配置值
 
-5. **Unable to determine dependencies for Winter CMS. Your composer.json file is invalid.**: This error has been reported by people using shared hosting, and is usually the result of either the `proc_*` methods being listed in the `disable_functions` PHP INI setting, or the `pcntl` extension for PHP not being enabled. Unfortunately, at this stage, there is no workaround, but you may be able to use the Installer on a local development environment that does not have these limitations, and then simply copy the full directory to your shared hosting once completed. We are actively looking into more long-term fix for this behaviour.
+5. **无法确定 Winter CMS 的依赖关系，您的 composer.json 文件无效。**：使用共享主机的人报告了此错误，通常是由于 `disable_functions` PHP INI 设置中列出的 `proc_*` 方法或未启用的 PHP 的 `pcntl` 扩展引起的。不幸的是，目前没有任何可行的解决方法，但您可以在没有这些限制的本地开发环境上使用安装程序，然后在完成后即可将完整目录复制到共享主机上。我们正在积极寻找更长期的修复方法。
 
 <a name="command-line-installation"></a>
-## Command-line installation
+## 命令行安装
 
-If you feel more comfortable with a command-line or want to use Composer, there is a CLI install process on the [Using Composer page](../help/using-composer)
+如果您更喜欢命令行或想要使用Composer，可以在[使用Composer页面](../help/using-composer)上使用CLI安装过程。
 
 <a name="post-install-steps"></a>
-## Post-installation steps
+## 安装后的步骤
 
-There are some things you may need to set up after the installation is complete.
+安装完成后，您可能需要进行一些设置。
 
 <a name="delete-install-files"></a>
-### Delete installation files
+### 删除安装文件
 
-If you have used the [Wizard installer](#wizard-installation), for security reasons you should verify the installation files have been deleted. The Winter installer attempts to cleanup after itself, but you should always verify that they have been successfullly removed:
+如果您使用了[向导安装程序](#wizard-installation)，出于安全原因，您应该验证安装文件已被删除。 Winter安装程序尝试清理自己，但您应该始终验证它们已被成功删除：
 
 ```css
- ┣ 📂 install       <== Installation directory
- ┣ 📜 install.html  <== Installation script
+ ┣ 📂 install       <== 安装目录
+ ┣ 📜 install.html  <== 安装脚本
 ```
 
 <a name="config-review"></a>
-### Review configuration
+### 审核配置
 
-Configuration files are stored in the `config` directory of the application. While each file contains descriptions for each setting, it is important to review the [common configuration options](../setup/configuration) available for your circumstances.
+配置文件存储在应用程序的“config”目录中。虽然每个文件都包含每个设置的说明，但重要的是要审核[适用于您情况的常见配置选项](../setup/configuration)。
 
-For example, in production environments you may want to enable [CSRF protection](../setup/configuration#csrf-protection). While in development environments, you may want to enable [bleeding edge updates](../setup/configuration#edge-updates).
+例如，在生产环境中，您可能希望启用[CSRF保护](../setup/configuration#csrf-protection)。而在开发环境中，您可能希望启用[最新的更新](../setup/configuration#edge-updates)。
 
-While most configuration is optional, we strongly recommend disabling [debug mode](../setup/configuration#debug-mode) for production environments. You may also want to use a [public folder](../setup/configuration#public-folder) for additional security.
+虽然大多数配置都是可选的，但我们强烈建议在生产环境中禁用[调试模式](../setup/configuration#debug-mode)。您还可能希望使用[公共文件夹](../setup/configuration#public-folder)以增加安全性。
 
 <a name="crontab-setup"></a>
-### Setting up the scheduler
+### 设置计划任务调度程序
 
-For scheduled tasks to operate correctly, you should add the following Cron entry to your server. Editing the crontab is commonly performed with the command `crontab -e`.
+为了使定时任务正常运行，您应该在服务器上添加以下 Cron 条目。通常使用命令 `crontab -e` 编辑 crontab。
 
     * * * * * php /path/to/artisan schedule:run >> /dev/null 2>&1
 
-Be sure to replace `/path/to/artisan` with the absolute path to the `artisan` file in the root directory of Winter. This cron will call the command scheduler every minute, in which Winter will evaluate any scheduled tasks and run the tasks that are due.
+请务必将 `/path/to/artisan` 替换为 Winter 根目录中 `artisan` 文件的绝对路径。此 cron 将每分钟调用命令调度程序，Winter 将评估任何计划任务并运行到期的任务。
 
-> **NOTE**: If you are adding this to `/etc/cron.d`, you'll need to specify a user immediately after `* * * * *`.
+> **注意**：如果您正在将其添加到 `/etc/cron.d`，则需要在 `* * * * *` 之后立即指定用户。
+
+
 
 <a name="queue-setup"></a>
-### Setting up queue workers
+### 设置队列工作者
 
-You may optionally set up an external queue for processing queued jobs. By default, these will be handled asynchronously by the platform. This behavior can be changed by setting the `default` parameter in the `config/queue.php`.
+您可以选择设置一个外部队列来处理排队的作业。默认情况下，这些将由平台异步处理。这种行为可以通过在`config/queue.php`中设置`default`参数来更改。
 
-If you decide to use the `database` queue driver, it is a good idea to add a Crontab entry for the command `php artisan queue:work --once` to process the first available job in the queue.
+如果您决定使用`database`队列驱动程序，最好在Crontab中为命令`php artisan queue:work --once`添加一个条目，以处理队列中的第一个可用作业。
+
