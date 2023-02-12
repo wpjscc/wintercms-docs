@@ -1,38 +1,38 @@
-# Installation
+# 安装
 
-- [Minimum system requirements](#system-requirements)
-- [Web-based installation](#web-based-installation)
-    - [Troubleshooting installation](#troubleshoot-installation)
-- [Command-line installation](#command-line-installation)
-- [Post-installation steps](#post-install-steps)
-    - [Delete installation files](#delete-install-files)
-    - [Review configuration](#config-review)
-    - [Setting up the scheduler](#crontab-setup)
-    - [Setting up queue workers](#queue-setup)
+- [最低系统要求](#system-requirements)
+- [基于Web的安装](#web-based-installation)
+    - [安装故障排除](#troubleshoot-installation)
+- [命令行安装](#command-line-installation)
+- [安装后步骤](#post-install-steps)
+    - [删除安装文件](#delete-install-files)
+    - [审阅配置](#config-review)
+    - [设置调度程序](#crontab-setup)
+    - [设置队列工作者](#queue-setup)
 
 <div class="og-description">
-    Documentation on the different ways to install Winter CMS for your next project.
+    Winter CMS的安装方式的文档。
 </div>
 
-There are two ways you can install Winter, either using the [Web-based installer](#web-based-installation) or [Composer installation](../help/using-composer) instructions. Before you proceed, you should check that your server meets the minimum system requirements.
+您可以使用[基于Web的安装程序](#web-based-installation)或[Composer安装说明](../help/using-composer)中的两种方式安装Winter。在继续之前，您应该检查服务器是否满足最低系统要求。
 
 <a name="system-requirements"></a>
-## Minimum system requirements
+## 最低系统要求
 
-Winter CMS has some server requirements for web hosting:
+Winter CMS对于Web托管有一些服务器要求：
 
-- PHP version 7.2 or higher
-- PDO PHP Extension (and relevant driver for the database you want to connect to)
-- cURL PHP Extension
-- OpenSSL PHP Extension
-- Mbstring PHP Extension
-- ZipArchive PHP Extension
-- GD PHP Extension
-- SimpleXML PHP Extension
+- PHP版本7.2或更高
+- PDO PHP扩展（以及您要连接到的数据库的相关驱动程序）
+- cURL PHP扩展
+- OpenSSL PHP扩展
+- Mbstring PHP扩展
+- ZipArchive PHP扩展
+- GD PHP扩展
+- SimpleXML PHP扩展
 
-Some OS distributions may require you to manually install some of the required PHP extensions.
+某些OS分发可能需要您手动安装一些所需的PHP扩展。
 
-When using Ubuntu, the following command can be run to install all required extensions:
+在使用Ubuntu时，可以运行以下命令来安装所有必需的扩展：
 
 ```bash
 sudo apt-get update &&
