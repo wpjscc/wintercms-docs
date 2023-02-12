@@ -9,13 +9,13 @@ sections:
   "架构概念":
     icon: "icon-lightbulb"
     pages:
-      architecture/introduction: "Introduction"
+      architecture/introduction: "介绍"
       # architecture/why-winter: "Why Winter CMS?"
       # architecture/request-lifecycle: "Request Lifecycle"
-      help/unit-testing: "Unit Testing"
-      help/using-composer: "Using Composer"
-      help/developer/guide: "Developer Guide"
-      architecture/maintainer-guide: "Maintainer Guide"
+      help/unit-testing: "单元测试"
+      help/using-composer: "使用composer"
+      help/developer/guide: "开发者指南"
+      architecture/maintainer-guide: "维护者指南"
 
   Backend (Admin):
     icon: "icon-desktop"
