@@ -16,6 +16,7 @@ Winter includes a variety of "helper" PHP functions. Many of these functions are
 ### Arrays
 
 <div class="collection-method-list" markdown="1">
+
 [Laravel `Arr::*()` Helpers](https://laravel.com/docs/9.x/helpers#arrays-and-objects-method-list)
 [array_add](#method-array-add)
 [array_divide](#method-array-divide)
@@ -35,6 +36,7 @@ Winter includes a variety of "helper" PHP functions. Many of these functions are
 [array_where](#method-array-where)
 [head](#method-head)
 [last](#method-last)
+
 </div>
 
 ### Paths
