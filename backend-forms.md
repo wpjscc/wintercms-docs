@@ -780,6 +780,7 @@ blog_content:
 There are various form widgets included as standard, although it is common for plugins to provide their own custom form widgets. You can read more on the [Form Widgets](widgets#form-widgets) article.
 
 <div class="content-list collection-method-list" markdown="1">
+
 - [Code editor](#widget-codeeditor)
 - [Color picker](#widget-colorpicker)
 - [Data table](#widget-datatable)
@@ -795,6 +796,7 @@ There are various form widgets included as standard, although it is common for p
 - [Rich editor / WYSIWYG](#widget-richeditor)
 - [Sensitive](#widget-sensitive)
 - [Tag list](#widget-taglist)
+
 </div>
 
 <a name="widget-codeeditor"></a>
