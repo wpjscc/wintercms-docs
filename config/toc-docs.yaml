@@ -33,6 +33,7 @@ sections:
       ui:
         title:  "用户界面指南@"
         rootPage: ui-form
+        external: true
         sections:
           Controls:
             icon: "icon-magic"
