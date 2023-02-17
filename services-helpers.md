@@ -42,6 +42,7 @@ Winter includes a variety of "helper" PHP functions. Many of these functions are
 ### Paths
 
 <div class="collection-method-list" markdown="1">
+
 [Path Symbols](#path-symbols)
 [app_path](#method-app-path)
 [base_path](#method-base-path)
@@ -54,11 +55,13 @@ Winter includes a variety of "helper" PHP functions. Many of these functions are
 [temp_path](#method-temp-path)
 [themes_path](#method-themes-path)
 [uploads_path](#method-uploads-path)
+
 </div>
 
 ### Strings
 
 <div class="collection-method-list" markdown="1">
+
 [Laravel `Str::*()` Helpers](https://laravel.com/docs/9.x/helpers#strings-method-list)
 [camel_case](#method-camel-case)
 [class_basename](#method-class-basename)
@@ -77,6 +80,7 @@ Winter includes a variety of "helper" PHP functions. Many of these functions are
 [studly_case](#method-studly-case)
 [trans](#method-trans)
 [trans_choice](#method-trans-choice)
+
 </div>
 
 ### SVG
@@ -88,6 +92,7 @@ Winter includes a variety of "helper" PHP functions. Many of these functions are
 ### Miscellaneous
 
 <div class="collection-method-list" markdown="1">
+
 [asset](#method-asset)
 [config](#method-config)
 [dd](#method-dd)
@@ -103,6 +108,7 @@ Winter includes a variety of "helper" PHP functions. Many of these functions are
 [trace_log](#method-trace-log)
 [trace_sql](#method-trace-sql)
 [url](#method-url)
+
 </div>
 
 <style>
