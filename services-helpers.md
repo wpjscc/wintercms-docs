@@ -86,7 +86,9 @@ Winter includes a variety of "helper" PHP functions. Many of these functions are
 ### SVG
 
 <div class="collection-method-list" markdown="1">
+
 [extract](#method-svg-extract)
+
 </div>
 
 ### Miscellaneous
