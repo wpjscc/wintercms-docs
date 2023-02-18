@@ -32,7 +32,7 @@ sections:
       backend/controls: "UI元素"
       ui:
         title:  "用户界面指南@"
-        rootPage: ui-form
+        rootPage: /ui-form
         external: true
         sections:
           Controls:
